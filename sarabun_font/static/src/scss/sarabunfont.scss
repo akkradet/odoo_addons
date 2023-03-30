@@ -1,0 +1,38 @@
+// ------------------------------------------------------------------
+// Sarabun
+// ------------------------------------------------------------------
+$Sarabun-font-path: '../fonts/Sarabun';
+
+@mixin Sarabun-font($type, $weight, $style) {
+    @font-face {
+        font-family: 'Sarabun';
+        src: url('#{$Sarabun-font-path}/Sarabun-#{$type}.eot');
+        src: url('#{$Sarabun-font-path}/Sarabun-#{$type}.eot?#iefix') format('embedded-opentype'),
+             url('#{$Sarabun-font-path}/Sarabun-#{$type}.woff') format('woff'),
+             url('#{$Sarabun-font-path}/Sarabun-#{$type}.ttf') format('truetype'),
+             url('#{$Sarabun-font-path}/Sarabun-#{$type}.svg#Sarabun') format('svg');
+        font-weight: $weight;
+        font-style: $style;
+    }
+
+    @font-face {
+        font-family: 'Sarabun-#{$type}';
+        src: url('#{$Sarabun-font-path}/Sarabun-#{$type}.eot');
+        src: url('#{$Sarabun-font-path}/Sarabun-#{$type}.eot?#iefix') format('embedded-opentype'),
+             url('#{$Sarabun-font-path}/Sarabun-#{$type}.woff') format('woff'),
+             url('#{$Sarabun-font-path}/Sarabun-#{$type}.ttf') format('truetype'),
+             url('#{$Sarabun-font-path}/Sarabun-#{$type}.svg#Sarabun') format('svg');
+    }
+}
+
+@mixin Sarabun-font-pair($type, $weight) {
+    @include Sarabun-font('#{$type}', $weight, normal);
+    @include Sarabun-font('#{$type}Italic', $weight, italic);
+}
+
+
+
+@include Sarabun-font-pair('Light', 300);
+@include Sarabun-font-pair('Regular', 400);
+@include Sarabun-font-pair('Bold', 700);
+@include Sarabun-font-pair('Extrabold', 800);

@@ -1,0 +1,13 @@
+ :root{
+    --background-topheader--ooo: #7f82ac;
+    --background-topheader: #875A7B;
+}
+ /*  Font  Start */
+   body { font-family: sarabun;}
+   html { font-family: sarabun;}
+ .pos{font-family: sarabun;}
+ .pos .modal-dialog .popup {font-family: sarabun;}
+ .ui-dialog, .modal-dialog{font-family: sarabun;}
+ .pos textarea {font-family: sarabun;}
+ /*  Font  End */
+ 
